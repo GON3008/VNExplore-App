@@ -27,6 +27,14 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
+  void _navigateToRegister() {
+    Navigator.pushNamed(context, '/register');
+  }
+
+  void _navigateToForgotPassword() {
+    Navigator.pushNamed(context, '/forgot-password');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +52,6 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: InputDecoration(labelText: 'Mật khẩu'),
               obscureText: true,
             ),
-          
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _login,
@@ -57,6 +64,20 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: TextStyle(color: Colors.red),
               ),
             ],
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TextButton(
+                  onPressed: _navigateToRegister,
+                  child: Text('Đăng Ký'),
+                ),
+                TextButton(
+                  onPressed: _navigateToForgotPassword,
+                  child: Text('Quên mật khẩu?'),
+                ),
+              ],
+            ),
           ],
         ),
       ),

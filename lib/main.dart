@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vnexplore/screens/register.dart';
 import 'services/auth.dart';
 import 'screens/login.dart';
 import 'screens/home.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       initialRoute: initialRoute,
       routes: {
         '/login': (context) => LoginScreen(),
+        '/register': (context) => RegisterScreen(),
         '/home': (context) => HomeScreen(),
       },
     );
